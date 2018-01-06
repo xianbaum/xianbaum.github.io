@@ -20,13 +20,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.christianbaum.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  xianbaum
+repository: xianbaum/xianbaum.github.io.
 
 # Build settings
 markdown: kramdown
-remote_theme: yous/whiteglass
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -39,5 +39,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-theme: jekyll-theme-cayman
