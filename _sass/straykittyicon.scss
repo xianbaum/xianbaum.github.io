@@ -1,0 +1,22 @@
+.straykittyicon {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QocEAUoFVdtzgAAAPNJREFUOMuNkz2OwjAQhb+J0ix90nKAvQDNFnALlJJI0KA9i0WTlaDOHbbYZptcYgta01MhDUUwiolj75MsjUd+b348I4ShA1uIIJsin/d5jKcxAc77HF1+h7LRlzuvYXQY2dnzw00BbNP7y124BE95Zle8vd+eQraBa/kzKiNP1e1Ekk0ckqdIM7tK/0IqIoBWhuNiPW7i/NCTXbOmcPn4ZIMB0Cz2sNz5HQ/ByyAVOSkAUGwVEcE2/xPMQmStTDT14tdw+uuou1YkNEiqDyHtXZcvGZEB6q6VbGrrHNllVmy9QaXuWoltmneeqIweF2tP6Q4ar2aEUWBJIQAAAABJRU5ErkJggg==) no-repeat center;
+    image-rendering: pixelated;
+    display: inline-block;
+    transition: 0.25s ease;
+    min-width: 32px;
+    min-height: 32px;
+    outline: none !important;
+}
+
+.straykittyicon-container {
+    background: linear-gradient(to bottom right, #faee22, #faee22, #ff87a6, #4400ee, #80f3e1, #80f3e1);
+    border-radius: 50%;
+    margin: 9px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.straykittyicon:hover {
+    transform: scale(1.5); 
+}
+

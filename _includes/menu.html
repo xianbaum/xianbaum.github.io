@@ -1,0 +1,50 @@
+<!-- Menu toggle buttons -->
+<input type="radio"
+       class="menu-toggle open"
+       name="menu-toggle"
+       title="Open"
+       aria-hidden="true"
+       tabindex="-1"
+       id="ta_menuOpen">
+<input type="radio"
+       class="menu-toggle close"
+       name="menu-toggle"
+       title="Close"
+       aria-hidden="true"
+       tabindex="-1">
+<label class="menu-toggle overlay hidden">
+  <input type="radio"
+         class="menu-toggle out"
+         name="menu-toggle"
+         aria-hidden="true"
+         tabindex="-1">
+</label>
+
+<div class="hamburger" id="ta_hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="nav-bar-container" id="ta_navbarContainer">
+  <nav class="nav-bar">
+    <div class="straykittyicon-container">
+      <a href="" class="straykittyicon" id="straykitty" aria-hidden="true" tabindex="-1"></a>
+    </div>
+    {% if page.layout != "home" %}
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    {% endif %}
+    <div class="scroll-container">
+      <span class="spacer"></span>
+      <div class="menu" id="ta_hamburgerMenu">
+        <ul>
+          <li><a href="/about/">About</a></li><li>
+          <a href="https://gitlab.com/xianbaum/">Gitlab</a></li><li>
+          <a href="https://github.com/xianbaum/">Github</a></li><li>
+          <a href="https://www.linkedin.com/in/xianbaum/">Linkedin</a></li><li>
+          <a href="mailto:mail@christianbaum.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

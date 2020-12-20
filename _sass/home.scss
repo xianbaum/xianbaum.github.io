@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+@import "vars";
+
+.portrait {
+    border-radius: 50%;
+    display: block;
+    margin: 3rem auto;
+    padding-top: 20px;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+    min-height: calc(100vh - #{$nav-bar-height-plus-border});
+}
+
+.contents {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 1.5em;
+    margin: auto;
+    display: block;
+    width: fit-content;
+    text-align: center;
+}
+
+.contents a {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: #66f;
+}
+
+.contents a:hover {
+    text-decoration: underline;
+}
