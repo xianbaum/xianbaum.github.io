@@ -6,5 +6,21 @@ p {
 }
 
 article {
+    margin: auto;
     padding: 2em;
+    max-width: 40em;
 }
+
+article header {
+    align-self: flex-start;
+}
+
+article a, article a:visited {
+    text-decoration: none;
+    color: #55f;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+

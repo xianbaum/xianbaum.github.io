@@ -239,8 +239,9 @@
         box-shadow:-4px -4px 18px -9px rgba(0,0,0,0.77);
     }
     
-    .nav-bar .menu li:nth-first-child(1) {
-        border-top: 2px solid #f3f3f3;
+    .nav-bar .menu li, .nav-bar .menu li a {
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .nav-bar .menu.semisticky-scroll {
