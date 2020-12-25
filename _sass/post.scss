@@ -1,14 +1,14 @@
 @import "vars";
 
-p {
-    padding-top: 1em;
-    line-height: 1.5em;
-}
-
 article {
     margin: auto;
     padding: 2em;
     max-width: 40em;
+}
+
+article p {
+    padding-top: 1em;
+    line-height: 1.5em;
 }
 
 article header {
@@ -24,3 +24,10 @@ article a:hover {
     text-decoration: underline;
 }
 
+article li {
+    margin-left: 1.25em;
+}
+
+article ul li {
+    list-style-type: disc;
+}
