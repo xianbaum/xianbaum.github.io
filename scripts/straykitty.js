@@ -421,12 +421,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 if(manager == null) {
                     manager = new StrayKittyManager(60);
                 }
-                if(manager.kittyCount >= 15) {
-                    location.href = "https://github.com/xianbaum/straykitty";
-                } else {
-                    manager.start();
-                    manager.addKitty();
-                }
+                manager.start();
+                manager.addKitty();
             }
         }
     }
