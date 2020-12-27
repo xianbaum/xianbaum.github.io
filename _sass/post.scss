@@ -27,13 +27,16 @@ article a:hover {
 
 article li {
     margin-left: 1.25em;
-}
-
-article ul li {
     list-style-type: disc;
+    line-height: 1.5;
 }
 
-.highlight {
+div.highlight {
     margin-top: 1em;
     margin-bottom: 1em;
+    overflow: auto;
+}
+
+article .post-meta {
+    font-weight: 300;
 }
