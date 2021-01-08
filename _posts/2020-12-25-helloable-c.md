@@ -1,4 +1,4 @@
----
+w---
 layout: post
 title: Helloable.c
 permalink: /blog/helloable-c
@@ -8,13 +8,12 @@ date: 2020-12-25 12:00 AM
 I want to write a little bit about object oriented C, and how to
 implement patterns seen in languages like C++ in C, hopefully without
 sacrificing performance or elegance. I created [helloable.c](https://gist.github.com/xianbaum/463f13a8d39014131b3f4fa67a241119)
-as a C interface implementation for comparable C++, in[helloable.cpp](https://gist.github.com/xianbaum/1407f6a63ed826e4f42e7100c38977e9).
+as a C interface implementation for comparable C++, in [helloable.cpp](https://gist.github.com/xianbaum/1407f6a63ed826e4f42e7100c38977e9).
 
-
-In other languages, developers often code everything to an interface by default.
-A lot of C code takes advantage of ifdef drop-in
-implementations, function pointers in structs, or a pointer to a vtable,
-but I don't think I have ever seen it in such a way
+C programmers usually code to interfaces in three ways: One, they use #ifdef drop-in
+implementations, two, function pointers in structs, or three, a pointer to a vtable.
+My implementation uses a vtable, but my implementation also goes an extra step to minimize CPU instructions
+to match the C++ equivalent implementation.
 that is fully comparable to how interfaces work in languages like Java. One reason
 might be that interfaces have overhead. While coding a web app in Java,
 you might code to an interface without giving a second thought. But coding for embedded
@@ -29,8 +28,8 @@ Requirements of the implementation:
 - Cast to and from the interface
 - Generate comparable assembly to a C++ implementation
 
-I hope I didn't miss anything, but three years ago, I think I got pretty close to
-C++ implementation down to the assembly, without being ugly.
+Three years ago, I made an effort to get close to C++ implementation down to the assembly,
+without being ugly and keeping abstractions as much as C allows.
 
 ## Single inheritance in C
 
