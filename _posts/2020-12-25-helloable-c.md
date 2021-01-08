@@ -1,4 +1,4 @@
-w---
+---
 layout: post
 title: Helloable.c
 permalink: /blog/helloable-c
