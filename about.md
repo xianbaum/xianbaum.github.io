@@ -4,10 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I am a software developer at WR Group. I am a full stack developer who primarily works on back-end. Before that, I graduated from Park University with a BS in Computer Science. As a software developer, I must always learn strive to be the best that I can. I am learning as much I can, and I aim to write the most efficient and maintainable code that I can.
+I am a software developer, improviser, runner, writer, and dreamer.
 
-I have many personal projects such as a mobile game called Kat's Dream, a browser extension cat toy, and a browser extension for using Reddit without nonfree javascript. But my biggest personal project I'm working on is a video game with the working title of City Night. 
+Professionally, I work at Progressive Leasing and previously at WR Group. I am a full stack developer, but most of my professional work has involved primarily back-end. Before that, I graduated from Park University with a BS in Computer Science, and even before that, I got my Associate of Arts at Park University. Every day I try to learn. I am learning as much I can, and I aim to write the most efficient and maintainable code that I can. The side-project I am most focused on is a game I am working on with a working title of City Night, which is in a private repository.
 
-Other than programming, I love chess, video games, writing, running, improv comedy and travelling.
+The purpose of this website is to share with the world essentially whatever I feel like sharing, whenever, even if updates are far between, and to provide basic profile information about me. So far, this site is filled with coding things, but blog posts aren't necessarily coding themed.
 
-Most importantly, through my strengths I want to make a difference in this world. I believe in making the world a better place than before we came to it.
+Most importantly, through my strengths I want to making this world a better place than before we came to it.
