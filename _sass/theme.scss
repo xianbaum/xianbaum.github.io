@@ -1,0 +1,134 @@
+@import "colors";
+
+@mixin light-theme {
+
+    background-color: $background-light;
+    transition: background-color 200ms;
+    color: $foreground-light;
+
+    .contents a {
+        color: $href-light;
+    }
+
+    .nav-bar-container {
+        background-color: $background-light;
+        transition: background-color 200ms, transform 0.25s;
+    }
+
+    .nav-bar,
+    .nav-bar .site-title,
+    .nav-bar li,
+    .nav-bar a {
+        color: $foreground-light;
+    }
+
+    .nav-bar {
+        border-bottom: 2px solid $border-light;
+    }
+
+    .nav-bar li a:hover {
+        border-bottom: 2px solid $nav-link-bottom-light;
+    }
+
+    .hamburger span {
+        background-color: $foreground-light;
+    }
+
+    .menu-toggle-overlay {
+        background-color: $foreground-light;
+    }
+
+    @media screen and (max-width: 799px) {
+        .nav-bar .menu {
+            background-color: $background-light;
+            transition: transform 0.25s, background-color 200ms;
+        }
+    }
+
+    article a,
+    article a:visited {
+        color: $href-light;
+    }
+}
+
+body {
+    @include light-theme;
+}
+
+@media(prefers-color-scheme: light) {
+    html body {
+        @include light-theme;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    html body:has(.theme-toggle.on:checked) {
+        @include light-theme;
+    }
+}
+
+@mixin dark-theme {
+    background-color: $background-dark;
+    color: $foreground-dark;
+    transition: background-color 200ms;
+
+    .contents a {
+        color: $href-dark;
+    }
+
+    .nav-bar,
+    .nav-bar .site-title,
+    .nav-bar li,
+    .nav-bar a {
+        color: $foreground-dark;
+    }
+
+    .nav-bar-container {
+        background-color: $background-dark;
+        transition: background-color 200ms, transform 0.25s;
+    }
+
+    .nav-bar {
+        border-bottom: 2px solid $border-light;
+    }
+
+    .nav-bar li a:hover {
+        border-bottom: 2px solid $nav-link-bottom-light;
+    }
+
+    .hamburger span {
+        background-color: $foreground-dark;
+    }
+
+    .menu-toggle-overlay {
+        background-color: $foreground-light;
+    }
+
+    @media screen and (max-width: 799px) {
+        .nav-bar .menu {
+            background-color: $background-dark;
+            transition: transform 0.25s, background-color 200ms;
+        }
+    }
+
+    article a,
+    article a:visited {
+        color: $href-dark;
+    }
+}
+
+body:has(.theme-toggle.on:checked) {
+    @include dark-theme;
+}
+
+@media(prefers-color-scheme: light) {
+    html body:has(.theme-toggle.on:checked) {
+        @include dark-theme;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    html body {
+        @include dark-theme;
+    }
+}

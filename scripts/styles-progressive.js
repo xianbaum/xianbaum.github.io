@@ -10,6 +10,7 @@
     function init() {
         initDraggableDrawer();
         initSemiStickyHeader();
+        initStrayKitty();
     }
     
     function initDraggableDrawer() {
@@ -123,36 +124,45 @@
     }
 
     function initSemiStickyHeader() {
-        const hamburger = document.getElementById("ta_hamburger");
-        const hamburgerMenu = document.getElementById("ta_hamburgerMenu");
-        const navbar = document.getElementById("ta_navbarContainer");
+        const elements = document.getElementsByClassName("semisticky");
         let lastScrollY = window.scrollY;
 
-        if(hamburger == null || navbar == null) return;
+        if(elements == null) return;
         document.addEventListener("scroll", (e) => {
-            if(window.scrollY > 156) {
-                hamburger.classList.add("semisticky-scroll");
-                navbar.classList.add("semisticky-scroll");
-                hamburgerMenu.classList.add("semisticky-scroll");
-                if(lastScrollY > window.scrollY) {
-                    hamburger.classList.add("semisticky-scroll-up");
-                    navbar.classList.add("semisticky-scroll-up");
-                    hamburgerMenu.classList.add("semisticky-scroll-up");
+            for(let i = 0; i < elements.length; i++) {
+                if(window.scrollY > 156) {
+                    elements[i].classList.add("semisticky-scroll");
+                    if(lastScrollY > window.scrollY) {
+                        elements[i].classList.add("semisticky-scroll-up");
+                    } else {
+                        elements[i].classList.remove("semisticky-scroll-up");
+                    }
                 } else {
-                    hamburger.classList.remove("semisticky-scroll-up");
-                    navbar.classList.remove("semisticky-scroll-up");
-                    hamburgerMenu.classList.remove("semisticky-scroll-up");
+                    elements[i].classList.remove("semisticky-scroll");
+                    elements[i].classList.remove("semisticky-scroll-up");
                 }
-            } else {
-                hamburger.classList.remove("semisticky-scroll");
-                hamburger.classList.remove("semisticky-scroll-up");
-                navbar.classList.remove("semisticky-scroll");
-                navbar.classList.remove("semisticky-scroll-up");
-                hamburgerMenu.classList.remove("semisticky-scroll");
-                hamburgerMenu.classList.remove("semisticky-scroll-up");
             }
             lastScrollY = window.scrollY;
         }, {passive: true});
+    }
+
+    function initStrayKitty() {
+        if(window.StrayKittyManager == null) {
+            setTimeout(initStrayKitty, 100);
+            return;
+        }
+        let el = document.getElementById("straykitty");
+        let manager = null;
+        if(el) {
+            el.onclick = function(e) {
+                e.preventDefault();
+                if(manager == null) {
+                    manager = new StrayKittyManager(60);
+                }
+                manager.start();
+                manager.addKitty();
+            }
+        }
     }
 })();
 // @license-end

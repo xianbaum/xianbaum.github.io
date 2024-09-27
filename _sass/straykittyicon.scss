@@ -3,17 +3,30 @@
     image-rendering: pixelated;
     display: inline-block;
     transition: 0.25s ease;
-    min-width: 32px;
-    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
     outline: none !important;
 }
 
 .straykittyicon-container {
     background: linear-gradient(to bottom right, #faee22, #faee22, #ff87a6, #4400ee, #80f3e1, #80f3e1);
     border-radius: 50%;
-    margin: 9px;
-    min-width: 32px;
-    min-height: 32px;
+    margin-top: 9px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 400;
+    transition: transform 0.25s;
+}
+
+.straykittyicon-container.semisticky-scroll {
+    position: fixed;
+    top: -$nav-bar-height-plus-border;
 }
 
 .straykittyicon:hover {

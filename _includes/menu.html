@@ -20,19 +20,43 @@
          tabindex="-1">
 </label>
 
-<div class="hamburger" id="ta_hamburger">
+<div class="hamburger semisticky" id="ta_hamburger">
     <span></span>
     <span></span>
     <span></span>
 </div>
 
-<div class="nav-bar-container" id="ta_navbarContainer">
+<!-- Theme toggle buttons -->
+<input type="radio"
+       class="theme-toggle on semisticky"
+       name="theme-toggle"
+       title="Toggle theme"
+       aria-hidden="true"
+       tabindex="-1"
+       id="theme-toggle-on"
+       hx-preserve="true">
+<input type="radio"
+       class="theme-toggle off semisticky"
+       name="theme-toggle"
+       title="Toggle theme"
+       aria-hidden="true"
+       tabindex="-1"
+       id="theme-toggle-off"
+       checked
+       hx-preserve="true">
+  
+<div class="theme-toggle-icon-outer semisticky">
+  <div class="theme-toggle-icon-inner semisticky"></div>
+</div>
+
+<div class="margin-1-icon straykittyicon-container semisticky">
+  <button class="straykittyicon" id="straykitty" aria-hidden="true" hx-preserve="true" tabindex="-1"></button>
+</div>
+
+<div class="nav-bar-container semisticky" id="ta_navbarContainer">
   <nav class="nav-bar">
-    <div class="straykittyicon-container">
-      <a href="" class="straykittyicon" id="straykitty" aria-hidden="true" tabindex="-1"></a>
-    </div>
     {% if page.layout != "home" %}
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <a class="margin-2-icon site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     {% endif %}
     <div class="scroll-container">
       <span class="spacer"></span>

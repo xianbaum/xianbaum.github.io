@@ -1,0 +1,110 @@
+@mixin theme-button-background-light {
+    background: linear-gradient(to top left, #aa1414, #de9e1c, #ffcc00);
+}
+
+@mixin theme-button-background-dark {
+    background: linear-gradient(to top left, #8478a1, #80f3e1, #80f3e1);
+}
+
+.theme-toggle {
+    position: absolute;
+    opacity: 0;
+    display: block;
+}
+
+.theme-toggle.on,
+.theme-toggle.off {
+    width: $nav-bar-height-plus-border;
+    height: $nav-bar-height-plus-border;
+    cursor: pointer;
+    top: -1px;
+    left: -1px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle-icon-outer {
+    position: absolute;
+    top: -1px;
+    border-radius: 50%;
+    margin: 9px;
+    min-width: 32px;
+    min-height: 32px;
+    z-index: 400;
+    -webkit-transition: opacity 200ms linear, transform 0.25s;
+    -ms-transition: opacity 200ms linear, transform 0.25s;
+    transition: opacity 200ms linear, transform 0.25s;
+}
+
+.theme-toggle-icon-inner {
+    border-radius: 50%;
+    min-width: 32px;
+    min-height: 32px;
+    z-index: 400;
+    opacity: 0;
+    -webkit-transition: opacity 200ms linear, transform 0.25s;
+    -ms-transition: opacity 200ms linear, transform 0.25s;
+    transition: opacity 200ms linear, transform 0.25s;
+}
+
+.theme-toggle-icon-outer {
+    @include theme-button-background-light;
+}
+
+@media(prefers-color-scheme: light) {
+    .theme-toggle-icon-outer {
+        @include theme-button-background-light;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    .theme-toggle-icon-outer {
+        @include theme-button-background-dark;
+    }
+}
+
+.theme-toggle-icon-inner {
+    @include theme-button-background-dark;
+}
+
+@media(prefers-color-scheme: light) {
+    .theme-toggle-icon-inner {
+        @include theme-button-background-dark;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    .theme-toggle-icon-inner {
+        @include theme-button-background-light;
+    }
+}
+
+.theme-toggle.semisticky-scroll, .theme-toggle-icon-inner.semisticky-scroll, .theme-toggle-icon-outer.semisticky-scroll {
+    position: fixed;
+    top: -$nav-bar-height-plus-border;
+}
+
+.theme-toggle.on:checked~.theme-toggle-icon-outer .theme-toggle-icon-inner {
+    opacity: 1;
+    -webkit-transition: opacity 200ms linear, transform 0.25s;
+    -ms-transition: opacity 200ms linear, transform 0.25s;
+    transition: opacity 200ms linear, transform 0.25s;
+}
+
+.theme-toggle.on,
+.theme-toggle.off {
+    z-index: 500;
+}
+
+.theme-toggle.on:checked {
+    z-index: 300;
+}
+
+.theme-toggle.off:checked {
+    z-index: 300;
+}
