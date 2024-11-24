@@ -2,7 +2,7 @@
 layout: post
 title: Helloable.c
 permalink: /blog/helloable-c
-date: 2020-12-25 12:00 AM
+date: 2020-12-25 00:00:00 -0700
 ---
 
 I want to write a little bit about object oriented C, and how to

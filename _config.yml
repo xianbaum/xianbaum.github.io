@@ -21,6 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.christianbaum.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  xianbaum
 repository: xianbaum/xianbaum.github.io.
+timezone: America/Phoenix
 
 sass:
 
