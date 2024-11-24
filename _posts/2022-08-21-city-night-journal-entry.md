@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /blog/2022-08-21-city-night
+permalink: /blog/2022-08-21-city-night-journal-entry
 date: 2022-08-21 00:00:00 -0700
 ---
 

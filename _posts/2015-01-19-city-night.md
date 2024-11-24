@@ -16,4 +16,3 @@ Haven’t been able to work on it all week because my calc class is hard. I work
 
 Demoing some things you can do with the multiple characters Haven’t tried adding a third character yet, but the code should work for any amount of characters…
 
-*Note November 24 2024: this game is City Night.*

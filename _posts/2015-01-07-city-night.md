@@ -10,4 +10,3 @@ Okay, now I should be 100% done with the menus. I wasn’t even planning to incl
 
 Anyway, there’s much more exciting progress going on in the actual game right now that I’d like to show off in the next few days!
 
-*Note November 24 2024: this game is City Night.*

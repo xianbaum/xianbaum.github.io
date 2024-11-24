@@ -20,4 +20,3 @@ the AI no longer acknowledges the player now for some reason though, but should 
 
 This was supposed to be a holiday game if you couldn’t tell already but I kinda missed the deadline
 
-*Note November 24 2024: this game is City Night.*

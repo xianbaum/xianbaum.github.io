@@ -18,4 +18,3 @@ Btw, when they seem to disappear in the video, their sprite is actually flashing
 
 Also, I don’t think I showed off screen transitions or dialog boxes yet, but they exist in the code. Changing maps is buggy with multiple characters right now, anyway.
 
-*Note November 24 2024: this game is City Night.*

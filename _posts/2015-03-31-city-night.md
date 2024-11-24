@@ -14,6 +14,5 @@ date: 2015-03-31 10:35:04 -0700
 
 What even are layers? Drawing the map was easier without them… heh. Also still trying to grasp the concept of shadows.
 
-*Note November 24 2024: this game is City Night.*
 
 

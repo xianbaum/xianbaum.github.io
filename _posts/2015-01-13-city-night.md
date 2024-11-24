@@ -14,4 +14,3 @@ date: 2015-01-13 13:39:54 -0700
 
 having fun with dialog options
 
-*Note November 24 2024: this game is City Night.*

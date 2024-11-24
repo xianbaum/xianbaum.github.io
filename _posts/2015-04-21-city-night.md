@@ -8,4 +8,3 @@ date: 2015-04-21 19:41:23 -0700
 
 I made diagonal sprites instead of only 4 directions
 
-*Note November 24 2024: this game is City Night.*
