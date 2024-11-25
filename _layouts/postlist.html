@@ -2,7 +2,7 @@
 layout: default
 ---
 <link rel="stylesheet" href="/css/post.css">
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article>
   <header class="post-header">
     <h2 class="post-title">
@@ -26,3 +26,25 @@ layout: default
   </header>
 </article>
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span>{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', '' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
