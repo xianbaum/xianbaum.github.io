@@ -1,14 +1,14 @@
 @charset 'UTF-8';
 @import "vars";
 
-.portrait {
+.home .portrait {
     border-radius: 50%;
     display: block;
     margin: 3rem auto;
     padding-top: 20px;
 }
 
-.content-container {
+.content-container:has(.home) {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -16,19 +16,19 @@
     min-height: calc(100vh - #{$nav-bar-height-plus-border});
 }
 
-.contents {
+.contents.home {
     display: block;
     width: 100%;
 }
 
-h1 {
+.home h1 {
     margin: auto;
     display: block;
     width: auto;
     text-align: center;
 }
 
-h2 {
+.home h2 {
     font-weight: 300;
     font-size: 1.5em;
     margin: auto;
@@ -37,14 +37,14 @@ h2 {
     text-align: center;
 }
 
-.contents a {
+.contents.home a {
     margin: auto;
     display: block;
     width: 200px;
     text-decoration: none;
 }
 
-.contents a:hover {
+.contents.home a:hover {
     text-decoration: underline;
 }
 

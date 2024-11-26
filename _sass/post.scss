@@ -4,6 +4,7 @@ article {
     margin: auto;
     padding: 2em;
     max-width: 40em;
+		word-wrap: break-word
 }
 
 article p {
@@ -40,6 +41,6 @@ article .post-meta {
     font-weight: 300;
 }
 
-article img {
+article img, article video {
 	max-width: 100%;
 }

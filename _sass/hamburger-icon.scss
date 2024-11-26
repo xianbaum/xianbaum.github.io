@@ -1,0 +1,48 @@
+.hamburger {
+	display: none;
+}
+
+@media screen and (max-width: 799px) {
+	.hamburger {
+		display: block;
+		position: absolute;
+		right: 18px;
+		top: 18px;
+		z-index: 400;
+		transition: transform 0.25s;
+	}
+
+	.hamburger.semisticky-scroll{
+		position: fixed;
+		top: 18 -$nav-bar-height-plus-border;
+	}
+
+	.hamburger.semisticky-scroll.semisticky-scroll-up{
+		transform: translateY($nav-bar-height-plus-border);
+	}
+
+	.hamburger span {
+		display: block;
+		width: 20px;
+		height: 1px;
+		border-radius: 3px;
+		margin-bottom: 5px;
+	}
+
+	.menu-toggle.open:checked ~ .hamburger span {
+		transition: 0.5s;
+	}
+
+	.menu-toggle.open:checked ~ .hamburger span:nth-last-child(1) {
+		transform: rotate(135deg) translate(-4.5px, 4.5px);
+	}
+
+	.menu-toggle.open:checked ~ .hamburger span:nth-last-child(3) {
+		opacity: 0;
+		transform: rotate(135deg) translate(-10px, 3px);
+	}
+
+	.menu-toggle.open:checked ~ .hamburger span:nth-last-child(2) {
+		transform: rotate(-135deg)
+	}
+}

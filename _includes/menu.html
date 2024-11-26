@@ -11,16 +11,13 @@
        name="menu-toggle"
        title="Close"
        aria-hidden="true"
+			 id="ta_menuClose"
        tabindex="-1">
-<label class="menu-toggle overlay hidden">
-  <input type="radio"
-         class="menu-toggle out"
-         name="menu-toggle"
-         aria-hidden="true"
-         tabindex="-1">
-</label>
+<label class="menu-toggle overlay hidden"
+			 for="ta_menuClose"
+			 tabindex="-1"></label>
 
-<div class="hamburger semisticky" id="ta_hamburger">
+<div class="hamburger semisticky" id="ta_hamburger" hx-preserve="true">
     <span></span>
     <span></span>
     <span></span>
@@ -60,13 +57,12 @@
     {% endif %}
     <div class="scroll-container">
       <span class="spacer"></span>
-      <nav class="menu" id="ta_hamburgerMenu">
+      <nav class="menu" id="ta_hamburgerMenu" hx-preserve="true">
         <ul>
           <li><a href="/about/">About</a></li><li>
           <a href="/blog/">Blog</a></li><li>
           <a href="https://gitlab.com/xianbaum/">Gitlab</a></li><li>
           <a href="https://github.com/xianbaum/">Github</a></li><li>
-          <a href="https://www.linkedin.com/in/xianbaum/">Linkedin</a></li><li>
           <a href="mailto:christian@christianbaum.com">Contact</a></li>
         </ul>
       </div>
