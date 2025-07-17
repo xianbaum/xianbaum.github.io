@@ -16,6 +16,11 @@
     z-index: 300;
 }
 
+.nav-bar ul {
+    display: flex;
+    flex-direction: row;
+}
+
 .nav-bar li {
     list-style: none;
     line-height: $nav-bar-height;
@@ -183,6 +188,10 @@
         height: 100vh;
         padding-top: $nav-bar-height;
         box-shadow:-4px -4px 18px -9px rgba(0,0,0,0.77);
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
     }
     
     .nav-bar .menu li, .nav-bar .menu li a {
