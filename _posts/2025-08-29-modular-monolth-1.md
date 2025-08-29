@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /blog/2025-08-28-modular-monolith-1
+permalink: /blog/2025-08-29-modular-monolith-1
 date: 2025-08-29 00:46:00 -0700
 title: Blurring the lines of modular monoliths and microservices in .NET with preprocessor directives
 ---
