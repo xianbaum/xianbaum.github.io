@@ -9,7 +9,7 @@ This is an exploration of the idea of having both a modular monolith and microse
 
 If you plan on sticking to a modular monolith and never ever want to scale out, this may not be for you. But what if you need the benefits of microservices? You wouldn't want to deploy your entire 100 service application just to scale one service.
 
-Before you get too eager to adopt this pattern, I must warn: it is another vector for potential bugs. That's why I'm planning on writing what you see here into a library with source generation, as I see the potential, but we're not quite there *yet*.
+Before you get too eager to adopt this pattern, I must warn: it is another vector for potential bugs. That's why I'm planning on writing what you see here into a library with source generation and possibly a dotnet tool, as I see the potential, but we're not quite there *yet*.
 
 ## Setting it all up
 
