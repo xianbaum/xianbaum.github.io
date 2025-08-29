@@ -166,6 +166,7 @@ var builder = WebApplication.CreateBuilder(args);
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("Domain")!));
 #endif
 
+// It can get a bit tricky with cases like this where it's not simply "On" or "Off"
 #if CONTROLLERS_WITH_VIEWS
 var mvcBuilder = builder.Services.AddControllersWithViews();
 #elif CONTROLLERS
@@ -173,19 +174,20 @@ var mvcBuilder = builder.Services.AddControllers();
 #endif
 
 #if CUSTOMER_SERVICE
-  // Defined in Domain.Customer
-  builder.Services.AddCustomerService();
+// Defined in Domain.Customer
+builder.Services.AddCustomerService();
 #endif
 
 #if PRODUCT_SERVICE
-  // Defined in Domain.Product
-  builder.Services.AddProductService();
+// Defined in Domain.Product
+builder.Services.AddProductService();
 #endif
 
 #if MASSTRANSIT
 builder.Services.AddMassTransit(config =>
 
 #if CUSTOMER_SERVICE
+  // Defined in Domain.Customer
   config.AddCustomerServiceConsumers();
 #endif
     // 
@@ -218,7 +220,7 @@ app.MapControllerRoute(
 #endregion
 ```
 
-That's about it! Like I said, most of the work here is in Program.cs and keeping your application host program light.
+That's about it! Keep your application host program light and you probably won't be editing it too much except to add new services.
 
 ## Considerations of this approach
 
