@@ -162,8 +162,8 @@ Now, it's time for the app initialization. I do recommend generally separating e
 var builder = WebApplication.CreateBuilder(args);
 
 #if ENTITY_FRAMEWORK_CORE
-    builder.Services.AddDbContextFactory<Domain.Entities.Core.BioveaDbContext>(
-        options => options.UseSqlServer(builder.Configuration.GetConnectionString("Biovea")!));
+    builder.Services.AddDbContextFactory<DbContext>(
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("Domain")!));
 #endif
 
 #if CONTROLLERS_WITH_VIEWS
