@@ -218,7 +218,7 @@ app.MapControllerRoute(
 #endregion
 ```
 
-That's about it! You can continue about your day
+That's about it! Like I said, most of the work here is in Program.cs and keeping your application host program light.
 
 ## Considerations of this approach
 
