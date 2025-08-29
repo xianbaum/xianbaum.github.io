@@ -238,11 +238,7 @@ If you hope to use something like Azure functions, AWS lambdas, or anything else
 
 ### Horizontal scaling is more attuned for the message broker pattern
 
-We use MassTransit which works well for our needs, although I've heard good things about other message brokers. Our setup allows us to deploy more or less applications with relative ease. If you're planning on horizontally scaling your API services, you'll probably want some load balancers and/or API gateways to distribute the load and route you to the correct app. I have considered that one option would be to put as much of your business logic as you can into a message broker, and give your APIs and webpages one single entrypoint with minimal business logic inside.
-
-### Horizontal scaling requires more complicated setups with load balancers and/or API gateways
-
-This is less a limitation of this pattern and more the reality of the microservices pattern. You'll need to configure your API routes for the possibility of other service existing on apps with other applications. You might need more special configurations for your API gateways and load balancers with things like Blazor. We've actually moved away from Blazor internally because of its architecture and client/server requirements, such as its sticky session requirement.
+We use MassTransit which works well for our needs, although I've heard good things about other message brokers. Our setup allows us to deploy more or less applications with relative ease. If you're planning on horizontally scaling your API services, you'll probably want some load balancers and/or API gateways to distribute the load and route you to the correct app. I have considered that one option would be to put as much of your business logic as you can into a message broker, and your APIs and webpages minimal. You might need more special configurations for your API gateways and load balancers with things like Blazor. We've actually moved away from Blazor internally because of its architecture and client/server requirements, such as its sticky session requirement.
 
 ### Probably wait a bit before following this pattern
 
