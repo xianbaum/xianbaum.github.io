@@ -86,7 +86,7 @@ You'll need to specify the configurations in the sln/slnx file. The sln file is 
       <BuildType Solution="Release|*" Project="Release" />
       <BuildType Solution="Release Customer|*" Project="Release" />
     </Project>
-    <Project Path="src/common/Domain.Product/Domain.Product.csproj">
+    <Project Path="src/product/Domain.Product/Domain.Product.csproj">
       <BuildType Solution="Debug|*" Project="Debug" />
       <BuildType Solution="Debug Product|*" Project="Debug" />
       <BuildType Solution="Release|*" Project="Release" />
