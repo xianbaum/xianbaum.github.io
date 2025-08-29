@@ -333,7 +333,7 @@ body {
   }
 
   .highlight .cp {
-    color: #f66fff;
+    color: #acacac;
     font-weight: 700;
   }
 
@@ -610,8 +610,13 @@ body {
     transition: background-color 100ms;
   }
 
-  .highlighter-rouge div.highlight {
+  .highlighter-rouge .highlight {
     border: 1px solid #69044e;
+  }
+
+  .highlighter-rouge .highlight .highlight{
+    border: 0;
+    padding: 0;
   }
 }
 
