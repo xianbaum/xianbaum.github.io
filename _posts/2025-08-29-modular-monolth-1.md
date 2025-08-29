@@ -5,7 +5,7 @@ date: 2025-08-29 00:46:00 -0700
 title: Blurring the lines of modular monoliths and microservices in .NET with preprocessor directives
 ---
 
-This is an exploration of the idea of having both a modular monolith and microservice architecture; the possibility of splitting the deployments up for the purpose of scaling with little compromise. Using directives, build configurations, and some smart architectural patterns, you can setup your deployables to don't have to choose between a modular monolith and a microservice setup. This is simply a "how to", and I'm not engaging into the "why" on modular monoliths or microservices. With this configuration, you don't need to engage one way or the other because you can have both! Sometimes, it pays to be indecivive.
+This is an exploration of the idea of having both a modular monolith and microservice architecture; the possibility of splitting the deployments up for the purpose of scaling with little compromise. Using directives, build configurations, and some smart architectural patterns, you can setup your deployables to one, or more depending on your needs. This is simply a "how to", and I'm not engaging into the "why" on modular monoliths or microservices. With this configuration, you don't need to engage one way or the other because you can have both! Sometimes, it pays to be indecivive.
 
 If you plan on sticking to a modular monolith and never ever want to scale out, this may not be for you. But what if you need the benefits of microservices? You wouldn't want to deploy your entire 100 service application just to scale one service.
 
