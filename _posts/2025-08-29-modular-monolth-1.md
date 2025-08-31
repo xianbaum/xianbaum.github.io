@@ -9,7 +9,7 @@ This is an exploration of the idea of having both a modular monolith and microse
 
 If you plan on sticking to a modular monolith and never ever want to scale out, this may not be for you. But what if you need the benefits of microservices? You wouldn't want to deploy your entire 100 service application just to scale one service.
 
-Before you get too eager to adopt this pattern, I must warn: it is another vector for potential bugs. That's why I'm planning on writing what you see here into a library with source generation and possibly a dotnet tool, as I see the potential, but we're not quite there *yet*.
+Before you get too eager to adopt this pattern, I must warn: it is another vector for potential bugs. --That's why I'm planning on writing what you see here into a library with source generation and possibly a dotnet tool, as-- I see the potential, but we're not quite there *yet*.
 
 ## Setting it all up
 
@@ -240,6 +240,7 @@ If you hope to use something like Azure functions, AWS lambdas, or anything else
 
 We use MassTransit which works well for our needs, although I've heard good things about other message brokers. Our setup allows us to deploy more or less applications with relative ease. If you're planning on horizontally scaling your API services, you'll probably want some load balancers and/or API gateways to distribute the load and route you to the correct app. I have considered that one option would be to put as much of your business logic as you can into a message broker, and your APIs and webpages minimal. You might need more special configurations for your API gateways and load balancers with things like Blazor. We've actually moved away from Blazor internally because of its architecture and client/server requirements, such as its sticky session requirement.
 
-### Probably wait a bit before following this pattern
+### Final thoughts
 
-I've been using this pattern for about 9 months and I'm working out the kinks. I think as it stands, this pattern is a little awkward to use and it is easy to introduce bugs that might not be visible if you're using one deployable until you start scaling out into multiple deployables. However, the main reason I think you should wait before implementing this pattern is because I think this pattern has potential as a library using source generation for setting up the and probably a .NET tool for creating different build configurations.
+I've been using this pattern for about 9 months and I'm working out the kinks. I think as it stands, this pattern is a little awkward to use and it is easy to introduce bugs that might not be visible if you're using one deployable until you start scaling out into multiple deployables. --However, the main reason I think you should wait before implementing this pattern is because I think this pattern has potential as a library using source generation for setting up the and probably a .NET tool for creating different build configurations.-- Update: 8/30: I've explored this option and currently I think this is the least complicated option.
+
