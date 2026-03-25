@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessible sidebar drawer with great UX
-permalink: /blog/accessible-sidebar-drawer-with-great-ux
+permalink: /blog/2024-11-26-accessible-sidebar-drawer-with-great-ux
 date: 2024-11-26 01:41:39 -0700
 ---
 

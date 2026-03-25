@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: /blog/2016-11-16-city-night
+permalink: /blog/2017-04-18-city-night
 date: 2017-04-18 21:50:10 -0700
 ---
 

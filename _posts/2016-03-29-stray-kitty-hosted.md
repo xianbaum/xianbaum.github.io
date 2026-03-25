@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stray Kitty: Hosted, and available as a Userscript"
-permalink: /blog/2016-03-29-stray-kitty
+permalink: /blog/2016-03-29-stray-kitty-hosted
 date: 2016-03-29 00:58:03 -0700
 ---
 

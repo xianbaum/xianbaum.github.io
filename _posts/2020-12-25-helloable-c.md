@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Helloable.c
-permalink: /blog/helloable-c
+permalink: /blog/2020-12-25-helloable-c
 date: 2020-12-25 00:00:00 -0700
 ---
 
