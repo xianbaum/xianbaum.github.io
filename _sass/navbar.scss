@@ -37,6 +37,12 @@
     padding: 0 1rem;
 }
 
+.nav-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
 .nav-bar li a:hover {
     border-bottom: 2px solid $nav-link-bottom-light;
 }
