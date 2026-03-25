@@ -2,22 +2,19 @@
 <input type="radio"
        class="menu-toggle open"
        name="menu-toggle"
-       title="Open"
-       aria-hidden="true"
-       tabindex="-1"
+       aria-label="Open menu"
        id="ta_menuOpen">
 <input type="radio"
        class="menu-toggle close"
        name="menu-toggle"
-       title="Close"
-       aria-hidden="true"
-			 id="ta_menuClose"
-       tabindex="-1">
+       aria-label="Close menu"
+			 id="ta_menuClose">
 <label class="menu-toggle overlay hidden"
 			 for="ta_menuClose"
-			 tabindex="-1"></label>
+			 tabindex="-1"
+       aria-hidden="true"></label>
 
-<div class="hamburger semisticky" id="ta_hamburger" hx-preserve="true">
+<div class="hamburger semisticky" id="ta_hamburger" hx-preserve="true" aria-hidden="true">
     <span></span>
     <span></span>
     <span></span>
@@ -27,22 +24,18 @@
 <input type="radio"
        class="theme-toggle on semisticky"
        name="theme-toggle"
-       title="Toggle theme"
-       aria-hidden="true"
-       tabindex="-1"
+       aria-label="Enable dark theme"
        id="theme-toggle-on"
        hx-preserve="true">
 <input type="radio"
        class="theme-toggle off semisticky"
        name="theme-toggle"
-       title="Toggle theme"
-       aria-hidden="true"
-       tabindex="-1"
+       aria-label="Enable light theme"
        id="theme-toggle-off"
        checked
        hx-preserve="true">
-  
-<div class="theme-toggle-icon-outer semisticky">
+
+<div class="theme-toggle-icon-outer semisticky" aria-hidden="true">
   <div class="theme-toggle-icon-inner semisticky"></div>
 </div>
 
@@ -51,24 +44,23 @@
 </div>
 
 <div class="nav-bar-container semisticky" id="ta_navbarContainer">
-  <nav class="nav-bar">
+  <nav class="nav-bar" aria-label="Main navigation">
     {% if page.layout != "home" %}
       <a class="margin-2-icon site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     {% endif %}
     <div class="scroll-container">
       <span class="spacer"></span>
-      <nav class="menu" id="ta_hamburgerMenu" hx-preserve="true">
-        <ul>
-          <li><a href="/about">About</a></li><li>
-          <a href="/blog/">Blog</a></li><li>
-          <a href="/minecraft">Minecraft</a></li><li>
-          <a href="https://hachyderm.io/@xianjam">Mastodon</a></li><li>
-          <a href="https://codeberg.org/xianjam/">Codeberg</a></li><li>
-          <a href="https://gitlab.com/xianbaum/">Gitlab</a></li><li>
-          <a href="https://github.com/xianbaum/">Github</a></li><li>
-          <a href="mailto:christian@christianbaum.com">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="menu" id="ta_hamburgerMenu" hx-preserve="true">
+        <li><a href="/about">About</a></li><li>
+        <a href="/blog/">Blog</a></li><li>
+        <a href="/minecraft">Minecraft</a></li><li>
+        <a href="https://hachyderm.io/@xianjam" rel="noopener">Mastodon<span class="sr-only"> (external)</span></a></li><li>
+        <a href="https://codeberg.org/xianjam/" rel="noopener">Codeberg<span class="sr-only"> (external)</span></a></li><li>
+        <a href="https://gitlab.com/xianbaum/" rel="noopener">Gitlab<span class="sr-only"> (external)</span></a></li><li>
+        <a href="https://github.com/xianbaum/" rel="noopener">Github<span class="sr-only"> (external)</span></a></li><li>
+        <a href="mailto:christian@christianbaum.com">Contact</a></li><li>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">RSS</a></li>
+      </ul>
     </div>
   </nav>
 </div>
