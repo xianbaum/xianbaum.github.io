@@ -1,7 +1,7 @@
 ---
 layout: post
 permalink: /blog/2026-03-25-why-christianbaum-com
-date: 2026-03-25 21:50:10 -0700
+date: 2026-03-25 20:30:00 +0900
 ---
 
 My whole life, I was a huge fan of the ".org" TLD. I also like going by my full name (first, middle last). So, why did I choose "christianbaum.com"?
